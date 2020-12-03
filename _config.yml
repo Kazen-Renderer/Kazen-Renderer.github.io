@@ -4,7 +4,7 @@ auto: true # automatically update your jekyll
 server: true # runs a local server
 paginate: 6 # pagination basted on number of posts
 exclude: ["Gemfile", "Gemfile.lock", "README.md", 'sass', 'watch.sh', 'style.scss'] # files to exclude
-baseurl: https://Kazen-Renderer.github.io
+baseurl: https://Kazen-Renderer.github.io/
 url: https://Kazen-Renderer.github.io
 repository: kazen-renderer
 permalink: /:year/:month/:title.html
