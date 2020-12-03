@@ -2,7 +2,7 @@
 layout: post
 title: 欢迎
 tags: [Announcements]
-author: Zhong Ling Xiao
+author: 钟凌霄
 ---
 
 欢迎来到Kazen Render，这个博客将记录Kazen渲染器的开发过程以及图形学知识的分享
