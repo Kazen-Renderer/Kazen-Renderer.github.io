@@ -1,7 +1,7 @@
 ---
 layout: post
-title: [世界你好]Hello World
-tags: [Art]
+title: Hello World：中文
+tags: [Announcements]
 author: Zhong Ling Xiao
 ---
 
