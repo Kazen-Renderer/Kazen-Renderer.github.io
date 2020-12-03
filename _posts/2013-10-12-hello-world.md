@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Hello World：中文
+title: Hello World
 tags: [Announcements]
 author: Zhong Ling Xiao
 ---
