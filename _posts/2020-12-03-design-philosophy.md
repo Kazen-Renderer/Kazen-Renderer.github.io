@@ -2,7 +2,7 @@
 layout: post
 title: Kazen的设计哲学
 tags: [Design]
-author: Zhong Ling Xiao
+author: 钟凌霄
 ---
 
 Kazen的设计哲学
