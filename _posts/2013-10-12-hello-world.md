@@ -1,8 +1,9 @@
 ---
 layout: post
-title: Hello World
-tags: [Announcements]
+title: [世界你好]Hello World
+tags: [Art]
 author: Zhong Ling Xiao
 ---
 
-Hello World! This is Code & Visuals on Jekyll!
+Hello World! 
+测试中文效果
