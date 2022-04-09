@@ -171,42 +171,42 @@ The corresponding **nano-Kazen** material scene graph:
 
 ```xml
 <bsdf type="normalmap">
-	<texture type="imagetexture">
-		<string name="filename" value="textures/MSMC_Brass_Hammered_Normal.jpg"/>
-		<float name="scale" value="1.0"/>
-		<string name="colorspace" value="linear"/>
-	</texture>
-	<bsdf type="kazenstandard">
-		<texture type="blend" id="baseColor">
-			<string name="blendmode" value="mix"/>
-			<texture type="constanttexture" id="input1">
-				<color name="color" value="0.887923 0.351533 0.002125"/>
-			</texture>
-			<texture type="constanttexture" id="input2">
-				<color name="color" value="0.982251 0.822786 0.62396"/>
-			</texture>
-			<texture type="imagetexture" id="mask">
-				<string name="filename" value="textures/MSMC_Circle_Outline_Grid.jpg"/>
-				<float name="scale" value="1.0"/>
-				<string name="colorspace" value="linear"/>
-			</texture>
-		</texture>
-		<texture type="constanttexture" id="roughness">
-			<color name="color" value="0.166233 0.166233 0.166233"/>
-		</texture>
-		<texture type="imagetexture" id="metallic">
-			<string name="filename" value="textures/MSMC_Circle_Outline_Grid.jpg"/>
-			<float name="scale" value="1.0"/>
-			<string name="colorspace" value="srgb"/>
-		</texture>
-		<float name="anisotropy" value="0.0"/>
-		<float name="specular" value="0.5"/>
-		<float name="specularTint" value="0.0"/>
-		<float name="clearcoat" value="0.0"/>
-		<float name="clearcoatRoughness" value="0.0"/>
-		<float name="sheen" value="0.0"/>
-		<float name="sheenTint" value="0.0"/>
-	</bsdf>
+    <texture type="imagetexture">
+        <string name="filename" value="textures/MSMC_Brass_Hammered_Normal.jpg"/>
+        <float name="scale" value="1.0"/>
+        <string name="colorspace" value="linear"/>
+    </texture>
+    <bsdf type="kazenstandard">
+        <texture type="blend" id="baseColor">
+            <string name="blendmode" value="mix"/>
+            <texture type="constanttexture" id="input1">
+                <color name="color" value="0.887923 0.351533 0.002125"/>
+            </texture>
+            <texture type="constanttexture" id="input2">
+                <color name="color" value="0.982251 0.822786 0.62396"/>
+            </texture>
+            <texture type="imagetexture" id="mask">
+                <string name="filename" value="textures/MSMC_Circle_Outline_Grid.jpg"/>
+                <float name="scale" value="1.0"/>
+                <string name="colorspace" value="linear"/>
+            </texture>
+        </texture>
+        <texture type="constanttexture" id="roughness">
+            <color name="color" value="0.166233 0.166233 0.166233"/>
+        </texture>
+        <texture type="imagetexture" id="metallic">
+            <string name="filename" value="textures/MSMC_Circle_Outline_Grid.jpg"/>
+            <float name="scale" value="1.0"/>
+            <string name="colorspace" value="srgb"/>
+        </texture>
+        <float name="anisotropy" value="0.0"/>
+        <float name="specular" value="0.5"/>
+        <float name="specularTint" value="0.0"/>
+        <float name="clearcoat" value="0.0"/>
+        <float name="clearcoatRoughness" value="0.0"/>
+        <float name="sheen" value="0.0"/>
+        <float name="sheenTint" value="0.0"/>
+    </bsdf>
 </bsdf>
 ```
 
@@ -240,7 +240,7 @@ Compare with Blender render result.
 
 [3] [Simon Kallweit's project report](http://simon-kallweit.me/rendercompo2015/report/) **Simon Kallweit**. 2015
 
-[4] [Microfacet Models for Refraction through Rough Surfaces](https://www.cs.cornell.edu/~srm/publications/EGSR07-btdf.pdf) **Bruce Walter*. 2007
+[4] [Microfacet Models for Refraction through Rough Surfaces](https://www.cs.cornell.edu/~srm/publications/EGSR07-btdf.pdf) **Bruce Walter**. 2007
 
 [5] [Understanding the Masking-Shadowing Function in Microfacet-Based BRDFs](https://jcgt.org/published/0003/02/03/paper.pdf) **Eric Heitz**. 2014
 
