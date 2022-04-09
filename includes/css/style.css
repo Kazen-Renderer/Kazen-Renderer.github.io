@@ -236,7 +236,7 @@ mark {
 
 code, tt {
     padding: 1px 3px;
-    font-family: Consolas, 'Courier New', monospace;
+    font-family: "Consolas", monospace, sans-serif;
     font-size: 0.85em;
     /* white-space: pre; */
     border: 1px solid #E3EDF3;
