@@ -1,0 +1,12 @@
+# visit https://github.com/mojombo/jekyll/wiki/Configuration for more settings
+
+paginate: 6 # pagination basted on number of posts
+exclude: ["Gemfile", "Gemfile.lock", "README.md", 'sass', 'watch.sh', 'style.scss', 'CNAME'] # files to exclude
+baseurl: /
+url: https://Kazen-Renderer.github.io/
+permalink: /:year/:month/:title.html
+author: Kazen Renderer
+authorurl: https://github.com/ZhongLingXiao
+name: Kazen
+title: Kazen
+markdown: kramdown

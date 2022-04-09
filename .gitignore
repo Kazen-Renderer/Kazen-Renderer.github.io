@@ -1,0 +1,5 @@
+/_site
+/drafts
+**/hq
+*DS_Store
+.jekyll-metadata

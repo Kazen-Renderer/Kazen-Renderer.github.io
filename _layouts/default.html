@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <meta name="viewport" content="width=device-width">
+        <title>{% if page.title %} {{ page.title }} {% endif %}</title>
+        <link rel="alternate" type="application/atom+xml" title="Atom" href="{{site.url}}/feeds/posts/default/">
+
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="description" content="{{site.description}}">
+        <link rel="stylesheet" href="/includes/css/style.css">
+        <!--<link href='https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+        -->
+        <link href='https://fonts.lug.ustc.edu.cn/css?family=Roboto:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>        
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/includes/ico/apple-touch-icon-144-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/includes/ico/apple-touch-icon-114-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/includes/ico/apple-touch-icon-72-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" href="/includes/ico/apple-touch-icon-57-precomposed.png">
+        <link rel="shortcut icon" href="/includes/ico/favicon.png">
+
+        <link rel="stylesheet" href="https://use.typekit.net/yap3ink.css">
+        <script>
+            MathJax = {
+                messageStyle: "none"
+            };
+        </script>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML' type='text/javascript'></script>
+
+    </head>
+    <body class="{{page.page-template}}">
+        <!-- Header
+            ================================================== -->
+        <header id="site-head">
+            <div class="vertical">
+                <div id="site-head-content">
+                    <div class="blog-title-wrap">
+                        <div class="blog-title-inner">   
+                            <h1 class="blog-title"><a class="nav" href="/">{{site.name}}</a></h1>
+                            <h1 class="blog-nav">
+                                <a class="nav" href="/archive.html">文章</a> | 
+                                <a class="nav" href="/">关于</a> |
+                                <a class="nav" href="https://github.com/ZhongLingXiao/nano-kazen">Github</a>
+                            </h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="navbar-padding"></div>
+
+        {{ content }}
+
+        <!-- Footer
+            ================================================== -->
+
+        <footer class="site-footer">
+           <section class="copyright">Copyright <a href="https://github.com/Kazen-Renderer">{{site.author}}</a></section>
+        </footer>
+
+        <!-- Javascripts 
+            ================================================= -->
+        <script src="/includes/js/jquery.min.js"></script>
+        <script src="/includes/js/custom.js"></script>
+
+    </body>
+</html>
