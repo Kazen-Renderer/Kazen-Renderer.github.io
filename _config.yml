@@ -10,3 +10,6 @@ authorurl: https://github.com/ZhongLingXiao
 name: Kazen
 title: Kazen
 markdown: kramdown
+kramdown:
+  syntax_highlighter_opts:
+    disable : true

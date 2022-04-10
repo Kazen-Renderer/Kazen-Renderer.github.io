@@ -62,7 +62,6 @@ float ratioDiffuse = (1.0f - metallic) / 2;
 float ratioGGX = 1.0f / (1.0f + clearcoat);
 ```
 
-
 ------
 These following images shows material parameters support by **KISS**:
 

@@ -239,26 +239,25 @@ code, tt {
     font-family: "Consolas", monospace, sans-serif;
     font-size: 0.85em;
     /* white-space: pre; */
-    border: 1px solid #E3EDF3;
-    background: #F7FAFB;
+    border: 0px solid #ffffff;
+    background: #ffffff;
     border-radius: 2px;
 }
-
+/*
 pre {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     margin: 1.6em 0;
-    border: 1px solid #E3EDF3;
+    border: 1px solid #ffffff;
     width: 100%;
     padding: 10px;
     font-family: Inconsolata, monospace, sans-serif;
     font-size: 0.9em;
     white-space: pre;
     overflow: auto;
-    background: #F7FAFB;
+    background: #ffffff;
     border-radius: 3px;
 }
-
 pre code, tt {
     font-size: inherit;
     white-space: -moz-pre-wrap;
@@ -267,6 +266,7 @@ pre code, tt {
     border: none;
     padding: 0;
 }
+
 
 span.code-line::before {
     content: counter(code-line);
@@ -282,7 +282,7 @@ span.code-line::before {
 span.code-line {
     counter-increment: code-line;
 }
-
+*/
 kbd {
     display: inline-block;
     margin-bottom: 0.4em;
