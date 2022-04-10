@@ -37,9 +37,10 @@ author: Zhong LingXiao
 
 For sampling the BRDF, I first use Russian-roulette to decide between sampling the diffuse lobe or the specular lobes with the following ratio:
 
-```c++
-float ratioDiffuse = (1.0f - metallic) / 2;
-```
+<div align=center>
+$$ ratio_{diffuse} = \frac{1 - metallic}{2} $$
+</div>
+
 
 For non-metallic materials, 1/2 the samples are sampled with cosine weighted hemisphere sampling, the 1/2 with specular sampling described below. For metallic materials, all samples are sampled using specular sampling.
 
@@ -47,12 +48,19 @@ For non-metallic materials, 1/2 the samples are sampled with cosine weighted hem
 
 The specular samples are divided into sampling the GGX (specular lobe) and GGX (clearcoat lobe) distribution with the following ratio:
 
-```c++
-float ratioGGX = 1.0f / (1.0f + clearcoat);
-```
+<div align=center>
+$$ ratio_{GGX} = \frac{1}{1 + clearcoat} $$
+</div>
 
 
 For materials with no clearcoat, samples are only sampled using the GGX distribution, for materials with 100% clearcoat, 1/2 the samples are directed to either of the distributions.
+```c++
+// diffuse weight
+float ratioDiffuse = (1.0f - metallic) / 2;
+
+// specular weight
+float ratioGGX = 1.0f / (1.0f + clearcoat);
+```
 
 
 ------
