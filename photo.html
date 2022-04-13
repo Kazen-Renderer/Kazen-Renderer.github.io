@@ -210,7 +210,7 @@ page-template: post-template
 
 <body>
     <main>
-        <ul class="navigationList">
+        <ul class="navigationList" id="navigationList">
             <li class="navigationItem active">
                 <button class="navigationItem__Button">
                     <svg aria-label="Posts" class="navigationItem__Icon" fill="#262626" viewBox="0 0 48 48">
@@ -259,6 +259,19 @@ page-template: post-template
         </section>
     </main>
 </body>
+
+<script>
+    // Add active class to the current button (highlight it)
+    var header = document.getElementById("navigationList");
+    var btns = header.getElementsByClassName("navigationItem");
+    for (var i = 0; i < btns.length; i++) {
+      btns[i].addEventListener("click", function() {
+      var current = document.getElementsByClassName("active");
+      current[0].className = current[0].className.replace(" active", "");
+      this.className += " active";
+      });
+    }
+</script>
 
 </html>            
             
