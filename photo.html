@@ -1,0 +1,65 @@
+---
+layout: default
+title: Kazen Renderer
+page-template: post-template
+---
+<!-- Content
+        ================================================== -->
+<body>
+    <style>
+        body {
+        margin: 0;
+        }
+
+        .image-grid {
+        --gap: 16px;
+        --num-cols: 4;
+        --row-height: 300px;
+
+        box-sizing: border-box;
+        padding: var(--gap);
+
+        display: grid;
+        grid-template-columns: repeat(var(--num-cols), 1fr);
+        grid-auto-rows: var(--row-height);
+        gap: var(--gap);
+        }
+
+        .image-grid > img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        }
+
+        .image-grid-col-2 {
+        grid-column: span 2;
+        }
+
+        .image-grid-row-2 {
+        grid-row: span 2;
+        }
+
+        /* Anything udner 1024px */
+        @media screen and (max-width: 1024px) {
+        .image-grid {
+            --num-cols: 2;
+            --row-height: 200px;
+        }
+        }
+
+    </style>
+</body>        
+<main class="content" role="main">
+    <div class="image-grid">
+        <img class="image-grid-col-2 image-grid-row-2" src="content/images/2022/kazen-con-v001-report/param/m1_r0.png" alt="final">
+        <img src="content/images/2022/kazen-con-v001-report/param/m0.0_r0.5.png" alt="param">
+        <img src="content/images/2022/kazen-con-v001-report/param/r0_s1.png" alt="param">
+        <img src="content/images/2022/kazen-con-v001-report/param/m0_r0_spec0.5.png" alt="param">
+        <img src="content/images/2022/kazen-con-v001-report/param/r0.5_c1.png" alt="param">
+      </div>
+</main>
+
+
+            
+            
+            
