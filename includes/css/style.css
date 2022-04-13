@@ -1008,8 +1008,8 @@ main.content {
     .blog-title-wrap {
         margin-left: -4px;
         color: white;
-        background-color: #3d3d3d ;
-        height: 87px ;
+        background-color: #aaaaaa ;
+        height: 72px ;
         opacity: .9;
     }
 
@@ -1039,7 +1039,7 @@ main.content {
         font-weight: 300;
         text-align: right ;
         right: 0px;
-        top:58px;
+        top:32px;
         position: absolute;
     }
 }
@@ -1078,8 +1078,8 @@ main.content {
     .blog-title-wrap {
         width: auto;
         color: white;
-        background-color: #3d3d3d ;
-        height: 110px ;
+        background-color: #aaaaaa ;
+        height: 90px ;
         /* opacity: .9; */
     }
 
@@ -1108,8 +1108,8 @@ main.content {
         font-size: 1em;
         font-weight: 300;
         text-align: center ;
-        right: 37.5%;
-        top:82px;
+        right: 25%;
+        top:58px;
     }
 }
 
