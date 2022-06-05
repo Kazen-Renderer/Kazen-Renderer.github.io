@@ -175,6 +175,8 @@ $ cat /etc/shells
 /usr/bin/dash
 /usr/bin/tmux
 /usr/bin/screen
+/bin/zsh
+/usr/bin/zsh
 ```
 
 
