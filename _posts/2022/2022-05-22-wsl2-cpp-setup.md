@@ -1,6 +1,6 @@
 ---
 layout: post
-title: wsl2 c++ 开发环境搭建
+title: c++ 开发环境搭建 (wsl2)
 tags: [cpp]
 author: Zhong Ling Xiao
 ---
@@ -17,7 +17,7 @@ author: Zhong Ling Xiao
 2. Ubuntu-20.04 国内镜像源
 3. 安装 zsh
 4. 安装 oh-my-zsh
-5. c++(cmake) 开发环境搭建
+5. c++ (cmake) 开发环境搭建
 
 
 
@@ -366,7 +366,9 @@ $ source .zshrc
 
 
 
-## **c++(cmake) 开发环境搭建**
+## **c++ (cmake) 开发环境搭建**
+
+我们需要在 Windows 环境中安装 VS Code。从官网下载最新版本，直接安装：[https://code.visualstudio.com/](https://link.zhihu.com/?target=https%3A//code.visualstudio.com/)
 
 **1. 基础软件安装**
 
@@ -382,7 +384,7 @@ $ sudo apt-get install build-essential
 
 *GDB*
 
-`GDB` 全称 GNU symbolic debugger，是 Linux 下常用的程序调试器。
+全称 GNU symbolic debugger，是 Linux 下常用的程序调试器。
 
 ```bash
 $ sudo apt-get install gdb
@@ -392,7 +394,7 @@ $ sudo apt-get install gdb
 
 *CMake*
 
-`CMake` 是一种优秀的跨平台的构建系统， 类似于 Makefile, 是专为 C/C++ 开发的一套构建系统。
+是一种优秀的跨平台的构建系统，类似于 Makefile，是专为 C/C++ 开发的一套构建系统。
 
 ```bash
 $ sudo apt install cmake
@@ -400,10 +402,10 @@ $ sudo apt install cmake
 
 
 
-*Visual Studio Code Remote-WSL 远程开发扩展*
+*Remote-WSL*
 
-1. 在 Windows 下安装 vscode
-2. 在 vscode 的插件市场，搜索 `remote-wsl` 插件，然后安装
+1. 在 Windows 环境中安装 VS Code。[官网](https://code.visualstudio.com/)下载最新版本并安装
+2. 在 VS Code 的插件市场，搜索 `remote-wsl` 插件，然后安装
 
 
 
