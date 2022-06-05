@@ -11,10 +11,10 @@ author: Zhong Ling Xiao
 
 
 
-## **[ 目录 ]**
+# **[ 目录 ]**
 
 1. 安装 wsl2
-2. Ubuntu-20.04 国内镜像源
+2. Ubuntu-20.04 软件源更新
 3. 安装 zsh
 4. 安装 oh-my-zsh
 5. c++ (cmake) 开发环境搭建
@@ -25,13 +25,11 @@ author: Zhong Ling Xiao
 
 
 
-## **适用于 Linux 的 Windows 子系统**
+# **1. 适用于 Linux 的 Windows 子系统 (wsl)**
 
 [https://docs.microsoft.com/zh-cn/windows/wsl/](https://docs.microsoft.com/zh-cn/windows/wsl/)
 
-
-
-**1. 安装**
+## **1.1 安装**
 
 ```
 $ wsl --list --online
@@ -62,7 +60,7 @@ $ wsl --install -d Ubuntu-20.04
 
 
 
-**2. 卸载**
+## **1.2 卸载**
 
 检查已经安装的 wsl2 系统
 
@@ -89,13 +87,13 @@ $ wsl --unregister Ubuntu-20.04
 
 
 
-## **Ubuntu-20.04 国内镜像源**
+# **2. Ubuntu-20.04 软件源更新**
 
 默认情况下Ubuntu 的apt下载源是国外的仓库，我们可以将它的默认下载地址切换到国内环境下，例如阿里云的镜像地址。
 
 
 
-**1. 备份**
+## **2.1 备份**
 
 ```bash
 $ sudo cp /etc/apt/sources.list /etc/apt/sources.list.bakup
@@ -103,7 +101,7 @@ $ sudo cp /etc/apt/sources.list /etc/apt/sources.list.bakup
 
 
 
-**2. 修改**
+## **2.2 修改**
 
 ```bash
 $ sudo vim /etc/apt/sources.list
@@ -126,7 +124,7 @@ deb-src http://mirrors.aliyun.com/ubuntu/ focal-backports main restricted univer
 
 
 
-**3. 更新**
+## **2.3 更新**
 
 ```bash
 $ sudo apt-get update
@@ -134,7 +132,7 @@ $ sudo apt-get update
 
 
 
-**4. 升级**
+## **2.4 升级**
 
 ```bash
 $ sudo apt-get upgrade
@@ -144,13 +142,13 @@ $ sudo apt-get upgrade
 
 ------
 
-## **安装 zsh**
+# **3. 安装 zsh**
 
 [zsh](https://www.zsh.org/) 是 Z shell 的简称。用于交互式登录的 shell 及脚本编写的命令解释器，可以拓展一些功能丰富的第三方插件和主题，提高 shell 使用效率。
 
 
 
-**1. 安装**
+## **3.1 安装**
 
 ```bash
 $ sudo apt-get install zsh
@@ -158,7 +156,7 @@ $ sudo apt-get install zsh
 
 
 
-**2. 检查**
+## **3.2 检查**
 
 ```bash
 $ cat /etc/shells
@@ -181,7 +179,7 @@ $ cat /etc/shells
 
 
 
-**3. 设置为系统默认 shell**
+## **3.3 设置为系统默认 shell**
 
 ```bash
 $ chsh -s /bin/zsh
@@ -189,7 +187,7 @@ $ chsh -s /bin/zsh
 
 
 
-**4. 首次设置 zsh** 
+## **3.4 首次设置 zsh** 
 
 我们需要重新开一个 Shell Session，第一次运行 zsh 时会进入如下的配置引导页面：
 
@@ -245,13 +243,13 @@ Please pick one of the following options:
 
 ------
 
-## **安装 oh-my-zsh**
+# **4. 安装 oh-my-zsh**
 
 由于 zsh 配置较为复杂，推荐使用配置管理工具来配置 zsh。下面介绍使用 [oh-my-zsh](https://ohmyz.sh/) 来修改 zsh 的主题和安装常用的插件。
 
 
 
-**1. 安装**
+## **4.1 安装**
 
 ```bash
 $ wget https://gitee.com/mirrors/oh-my-zsh/raw/master/tools/install.sh
@@ -308,7 +306,7 @@ REMOTE=${REMOTE:-https://gitee.com/${REPO}.git}
 
 
 
-**2. 配置 zsh**
+## **4.2 配置 zsh**
 
 ```bash
 $ vim ~/.zshrc
@@ -340,7 +338,7 @@ plugins=(git zsh-autosuggestions)
 
 
 
-**3. 安装 autosuggestion 插件**
+## **4.3 安装 autosuggestion 插件**
 
 上面我们为 zsh 配置了 autosuggestions 插件，但这个插件并不是 zsh 自带的插件，需要下载安装。
 
@@ -366,11 +364,11 @@ $ source .zshrc
 
 
 
-## **c++ (cmake) 开发环境搭建**
+# **5. c++ (cmake) 开发环境搭建**
 
 我们需要在 Windows 环境中安装 VS Code。从官网下载最新版本，直接安装：[https://code.visualstudio.com/](https://link.zhihu.com/?target=https%3A//code.visualstudio.com/)
 
-**1. 基础软件安装**
+## **5.1 基础软件安装**
 
 *build-essential*
 
@@ -409,7 +407,7 @@ $ sudo apt install cmake
 
 
 
-**2. 测试**
+## **5.2 测试**
 
 创建一个文件夹 test ，然后进入文件夹。
 
