@@ -3,6 +3,121 @@ layout: default
 page-template: post-template
 ---
 
+<head>
+    <style>
+        /* 1. Enable smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* 2. Make nav sticky */
+        main > nav {
+            position: sticky;
+            top: 2rem;
+            align-self: start;
+        }
+        
+        /* 3. ScrollSpy active styles (see JS tab for activation) */
+        .section-nav li.active > a {
+            color: #888;
+            font-weight: 500;
+        }
+
+        /* Sidebar Navigation */
+        .section-nav {
+            margin-top: 2rem;
+            padding-left: 0;
+            border-left: 1px solid #efefef;
+        }
+        
+        .section-nav a {
+            text-decoration: none;
+            display: block;
+            padding: .125rem 0;
+            color: #ccc;
+            transition: all 50ms ease-in-out; /* 💡 This small transition makes setting of the active state smooth */
+        }
+        
+        .section-nav a:hover,
+        .section-nav a:focus {
+            color: #888;
+        }
+        
+        /** Poor man's reset **/
+        * {
+            box-sizing: border-box;
+        }
+        
+        .section-nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .section-nav ol {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .section-nav li {
+            margin-left: 1rem;
+        }
+        
+        /** page layout **/
+        main {
+            display: grid;
+            grid-template-columns: 1fr 15em;
+            max-width: 100em;
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        /** enlarge the sections for this demo, so that we have a long scrollable page **/
+        section {
+            padding-bottom: 20rem;
+        }        
+
+        .warning {
+            padding: 1em;
+            border: 1px solid #ccc;
+            display: block;
+            width: fit-content;
+            margin: 1rem auto;
+        }
+        
+        .warning p {
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                const id = entry.target.getAttribute('id');
+                if (entry.intersectionRatio > 0) {
+                    document.querySelector(`nav li a[href="#${id}"]`).parentElement.classList.add('active');
+                } else {
+                    document.querySelector(`nav li a[href="#${id}"]`).parentElement.classList.remove('active');
+                }
+            });
+        });
+
+        // Track all sections that have an `id` applied
+        document.querySelectorAll('h1[id]').forEach((section) => {
+            observer.observe(section);
+        });
+        document.querySelectorAll('h2[id]').forEach((section) => {
+            observer.observe(section);
+        });
+        document.querySelectorAll('h3[id]').forEach((section) => {
+            observer.observe(section);
+        });
+    });
+</script>
+
 <main class="content" role="main">
     <article class="post">
 
@@ -15,8 +130,10 @@ page-template: post-template
                 {% endif %}</span>
 
             <section class="post-content">
-                {{content}}
-            </section>
-
+                {{ content }}
+            </section>    
     </article>
+    <nav class="section-nav">
+        {% include toc.html html=content %}
+    </nav>
 </main>
