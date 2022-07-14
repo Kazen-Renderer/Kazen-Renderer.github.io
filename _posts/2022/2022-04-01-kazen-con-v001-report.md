@@ -65,7 +65,7 @@ float ratioGGX = 1.0f / (1.0f + clearcoat);
 ------
 These following images shows material parameters support by **KISS**:
 
-### 2.1 **`roughness`**
+### 2.1 roughness
 
 
 |             0.0              |              0.5               |
@@ -76,7 +76,7 @@ These following images shows material parameters support by **KISS**:
 
 ------
 
-### 2.2 **`metallic`**
+### 2.2 metallic
 
 |            0.0             |             0.5              |
 | :------------------------: | :--------------------------: |
@@ -86,7 +86,7 @@ These following images shows material parameters support by **KISS**:
 
 ------
 
-### 2.3 **`specular`**
+### 2.3 specular
 
 |               0.0                |                0.5                 |
 | :------------------------------: | :--------------------------------: |
@@ -96,7 +96,7 @@ These following images shows material parameters support by **KISS**:
 
 ------
 
-### 2.4 **`specularTint`**
+### 2.4 specularTint
 
 |               0.0                |                  0.5                   |
 | :------------------------------: | :------------------------------------: |
@@ -106,7 +106,7 @@ These following images shows material parameters support by **KISS**:
 
 ------
 
-### 2.5 **`clearcoat`**
+### 2.5 clearcoat
 
 |             0.0              |              0.5               |
 | :--------------------------: | :----------------------------: |
@@ -115,7 +115,7 @@ These following images shows material parameters support by **KISS**:
 | ![]({{site.url}}/content/images/2022/kazen-con-v001-report/param/r0.5_c0.png) |  ![]({{site.url}}/content/images/2022/kazen-con-v001-report/param/r0.5_c1.png)  |
 
 ------
-### 2.6 **`clearcoatRoughness`**
+### 2.6 clearcoatRoughness
 
 |             0.0              |                0.5                 |
 | :--------------------------: | :--------------------------------: |
@@ -125,7 +125,7 @@ These following images shows material parameters support by **KISS**:
 
 ------
 
-### 2.7 **`sheen`**
+### 2.7 sheen
 
 |            0.0             |             0.5              |
 | :------------------------: | :--------------------------: |
@@ -135,7 +135,7 @@ These following images shows material parameters support by **KISS**:
 
 ------
 
-### 2.8 **`sheenTint`**
+### 2.8 sheenTint
 
 |            0.0             |               0.5                |
 | :------------------------: | :------------------------------: |
@@ -253,7 +253,7 @@ Compare with Blender render result.
 
 [6] [Sampling the GGX Distribution of Visible Normals](https://jcgt.org/published/0007/04/01/paper.pdf) **Eric Heitz**. 2018
 
-[7] [ROBUST MONTE CARLO METHODS FOR LIGHT TRANSPORT SIMULATION](https://graphics.stanford.edu/papers/veach_thesis/thesis.pdf) **Eric Veach**. 1997
+[7] [Robust monte carlo methods for light transport simulation](https://graphics.stanford.edu/papers/veach_thesis/thesis.pdf) **Eric Veach**. 1997
 
 [8] [Physically Based Rendering: from theory to implementation](https://www.pbrt.org/) **Matt Pharr, Wenzel Jakob and Greg Humphreys**. 2016
 
