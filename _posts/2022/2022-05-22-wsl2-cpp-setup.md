@@ -6,30 +6,11 @@ author: Zhong Ling Xiao
 ---
 
 
-
-
-
-
-
-# **[ 目录 ]**
-
-1. 安装 wsl2
-2. Ubuntu-20.04 软件源更新
-3. 安装 zsh
-4. 安装 oh-my-zsh
-5. c++ (cmake) 开发环境搭建
-
-
-
-------
-
-
-
-# **1. 适用于 Linux 的 Windows 子系统 (wsl)**
+# 1. 适用于 Linux 的 Windows 子系统 (wsl)
 
 [https://docs.microsoft.com/zh-cn/windows/wsl/](https://docs.microsoft.com/zh-cn/windows/wsl/)
 
-## **1.1 安装**
+## 1.1 安装
 
 ```
 $ wsl --list --online
@@ -60,7 +41,7 @@ $ wsl --install -d Ubuntu-20.04
 
 
 
-## **1.2 卸载**
+## 1.2 卸载
 
 检查已经安装的 wsl2 系统
 
@@ -87,13 +68,13 @@ $ wsl --unregister Ubuntu-20.04
 
 
 
-# **2. Ubuntu-20.04 软件源更新**
+# 2. Ubuntu-20.04 软件源更新
 
 默认情况下Ubuntu 的apt下载源是国外的仓库，我们可以将它的默认下载地址切换到国内环境下，例如阿里云的镜像地址。
 
 
 
-## **2.1 备份**
+## 2.1 备份
 
 ```bash
 $ sudo cp /etc/apt/sources.list /etc/apt/sources.list.bakup
@@ -101,7 +82,7 @@ $ sudo cp /etc/apt/sources.list /etc/apt/sources.list.bakup
 
 
 
-## **2.2 修改**
+## 2.2 修改
 
 ```bash
 $ sudo vim /etc/apt/sources.list
@@ -124,7 +105,7 @@ deb-src http://mirrors.aliyun.com/ubuntu/ focal-backports main restricted univer
 
 
 
-## **2.3 更新**
+## 2.3 更新
 
 ```bash
 $ sudo apt-get update
@@ -132,7 +113,7 @@ $ sudo apt-get update
 
 
 
-## **2.4 升级**
+## 2.4 升级
 
 ```bash
 $ sudo apt-get upgrade
@@ -142,13 +123,13 @@ $ sudo apt-get upgrade
 
 ------
 
-# **3. 安装 zsh**
+# 3. 安装 zsh
 
 [zsh](https://www.zsh.org/) 是 Z shell 的简称。用于交互式登录的 shell 及脚本编写的命令解释器，可以拓展一些功能丰富的第三方插件和主题，提高 shell 使用效率。
 
 
 
-## **3.1 安装**
+## 3.1 安装
 
 ```bash
 $ sudo apt-get install zsh
@@ -156,7 +137,7 @@ $ sudo apt-get install zsh
 
 
 
-## **3.2 检查**
+## 3.2 检查
 
 ```bash
 $ cat /etc/shells
@@ -179,17 +160,15 @@ $ cat /etc/shells
 
 
 
-## **3.3 设置为系统默认 shell**
+## 3.3 启动 zsh
+
+输入命令
 
 ```bash
-$ chsh -s /bin/zsh
+$ zsh
 ```
+可以看到第一次运行 zsh 时会进入如下的配置引导页面：
 
-
-
-## **3.4 首次设置 zsh** 
-
-我们需要重新开一个 Shell Session，第一次运行 zsh 时会进入如下的配置引导页面：
 
 ```
 This is the Z Shell configuration function for new users,
@@ -198,123 +177,93 @@ You are seeing this message because you have no zsh startup files
 (the files .zshenv, .zprofile, .zshrc, .zlogin in the directory
 ~).  This function can help you with a few settings that should
 make your use of the shell easier.
-
+​
 You can:
-
+​
 (q)  Quit and do nothing.  The function will be run again next time.
-
+​
 (0)  Exit, creating the file ~/.zshrc containing just a comment.
      That will prevent this function being run again.
-
+​
 (1)  Continue to the main menu.
-
+​
 --- Type one of the keys in parentheses ---
 ```
 
-这里我们选择 `1` ，开始进行配置：
-
-```
-Attempting to extract information from manual pages...
-Please pick one of the following options:
-
-(1)  Configure settings for history, i.e. command lines remembered
-     and saved by the shell.  (Recommended.)
-
-(2)  Configure the new completion system.  (Recommended.)
-
-(3)  Configure how keys behave when editing command lines.  (Recommended.)
-
-(4)  Pick some of the more common shell options.  These are simple "on"
-     or "off" switches controlling the shell's features.
-
-(0)  Exit, creating a blank ~/.zshrc file.
-
-(a)  Abort all settings and start from scratch.  Note this will overwrite
-     any settings from zsh-newuser-install already in the startup file.
-     It will not alter any of your other settings, however.
-
-(q)  Quit and do nothing else.  The function will be run again next time.
---- Type one of the keys in parentheses ---
-```
-
-这里我们选择 `1`
+这里我们选择 q 直接退出。
 
 
 
 ------
 
-# **4. 安装 oh-my-zsh**
+# 4. 安装 oh-my-zsh
 
 由于 zsh 配置较为复杂，推荐使用配置管理工具来配置 zsh。下面介绍使用 [oh-my-zsh](https://ohmyz.sh/) 来修改 zsh 的主题和安装常用的插件。
 
 
 
-## **4.1 安装**
+## 4.1 安装
+
+获取源码
 
 ```bash
-$ wget https://gitee.com/mirrors/oh-my-zsh/raw/master/tools/install.sh
+$ git clone https://gitee.com/mirrors/oh-my-zsh.git
 ```
 
-
-
-给 `install.sh` 添加权限
+执行安装命令
 
 ```bash
-$ chmod +x install.sh
+$ sh oh-my-zsh/tools/install.sh
 ```
 
-
-
-执行`install.sh`
+完成后可以看到如下界面
 
 ```bash
-$ ./install.sh
+Cloning Oh My Zsh...
+remote: Enumerating objects: 1295, done.
+remote: Counting objects: 100% (1295/1295), done.
+remote: Compressing objects: 100% (1249/1249), done.
+remote: Total 1295 (delta 26), reused 1250 (delta 26), pack-reused 0
+Receiving objects: 100% (1295/1295), 1.06 MiB | 3.69 MiB/s, done.
+Resolving deltas: 100% (26/26), done.
+From https://github.com/ohmyzsh/ohmyzsh
+ * [new branch]      master     -> origin/master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+Already on 'master'
+/home/kazen/oh-my-zsh/tools
+
+Looking for an existing zsh config...
+Using the Oh My Zsh template file and adding it to ~/.zshrc.
+
+Time to change your default shell to zsh:
+Do you want to change your default shell to zsh? [Y/n] y
+Changing your shell to /usr/bin/zsh...
+[sudo] password for kazen:
+Shell successfully changed to '/usr/bin/zsh'.
+
+         __                                     __
+  ____  / /_     ____ ___  __  __   ____  _____/ /_
+ / __ \/ __ \   / __ `__ \/ / / /  /_  / / ___/ __ \
+/ /_/ / / / /  / / / / / / /_/ /    / /_(__  ) / / /
+\____/_/ /_/  /_/ /_/ /_/\__, /    /___/____/_/ /_/
+                        /____/                       ....is now installed!
+
+
+Before you scream Oh My Zsh! look over the `.zshrc` file to select plugins, themes, and options.
+
+• Follow us on Twitter: @ohmyzsh
+• Join our Discord community: Discord server
+• Get stickers, t-shirts, coffee mugs and more: Planet Argon Shop
 ```
 
 
-
-我们发现速度非常慢，需要更换国内镜像。这里我们打开 `install.sh` 进行编辑
-
-```bash
-$ vim install.sh
-```
-
-
-
-找到如下部分：
-
-```sh
-# Default settings
-ZSH=${ZSH:-~/.oh-my-zsh}
-REPO=${REPO:-ohmyzsh/ohmyzsh}
-REMOTE=${REMOTE:-https://github.com/${REPO}.git}
-BRANCH=${BRANCH:-master}
-```
-
-
-
-将中间两行改为：
-
-```sh
-REPO=${REPO:-mirrors/oh-my-zsh}
-REMOTE=${REMOTE:-https://gitee.com/${REPO}.git}
-```
-
-
-
-最后保存退出即可：`:wq`
-
-
-
-## **4.2 配置 zsh**
+## 4.2 配置 zsh
 
 ```bash
 $ vim ~/.zshrc
 ```
 
-
-
-**主题修改**
+**主题修改
 
 ```
 ZSH_THEME="robbyrussell"
@@ -338,7 +287,7 @@ plugins=(git zsh-autosuggestions)
 
 
 
-## **4.3 安装 autosuggestion 插件**
+## 4.3 安装 autosuggestion 插件
 
 上面我们为 zsh 配置了 autosuggestions 插件，但这个插件并不是 zsh 自带的插件，需要下载安装。
 
@@ -364,11 +313,11 @@ $ source .zshrc
 
 
 
-# **5. c++ (cmake) 开发环境搭建**
+# 5. c++ (cmake) 开发环境搭建
 
 我们需要在 Windows 环境中安装 VS Code。从官网下载最新版本，直接安装：[https://code.visualstudio.com/](https://link.zhihu.com/?target=https%3A//code.visualstudio.com/)
 
-## **5.1 基础软件安装**
+## 5.1 基础软件安装
 
 *build-essential*
 
@@ -407,7 +356,7 @@ $ sudo apt install cmake
 
 
 
-## **5.2 测试**
+## 5.2 测试
 
 创建一个文件夹 test ，然后进入文件夹。
 
